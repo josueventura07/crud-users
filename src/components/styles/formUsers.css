@@ -1,0 +1,84 @@
+.form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #0009;
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+}
+
+.fa-regular {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #D85D5D;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.fa-regular:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px #0009;
+    transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.form_title {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.form_div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.form_label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000a;
+}
+
+.form_input {
+    border: none;
+    padding: 7px 15px;
+    background-color: #F9FAFC;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    font-weight: 200;
+    
+}
+
+.form_input::placeholder {
+    color: #93ade5;
+}
+
+.form_input:hover {
+    border: 1px solid #a5afc4;
+}
+
+.form_btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 2px;
+    background-color: #8e60ca;
+    box-shadow: 0px 2px 5px black;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: box-shadow 300ms ease-in-out, filter 300ms ease-in-out, font-weight 300ms ease-in-out;
+}
+
+.form_btn:hover {
+    box-shadow: 0px 0px 0px black;
+    filter: brightness(1.1);
+    font-weight: 550;
+    transition: box-shadow 300ms ease-in-out, filter 300ms ease-in-out, font-weight 300ms ease-in-out;
+}
