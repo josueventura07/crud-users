@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import './styles/formUsers.css'
 // https://movies-crud-academlo.herokuapp.com/swagger/
 
-const FormUsers = ({createUsers, updatedInfo, updatedUserById, setUpdatedInfo, setFormIsClosed}) => {
+const FormUsers = ({createUsers, updatedInfo, updatedUserById, setUpdatedInfo, setFormIsClosed, setMessageClose}) => {
 
     
     const defaultValues = {
@@ -32,10 +32,12 @@ const submit = data => {
     }
     reset(defaultValues)
     setFormIsClosed(true)
+    setMessageClose(false)
 }
 
 const handleCloseForm = () => {
     setFormIsClosed(true)
+    
 }
 
   return (

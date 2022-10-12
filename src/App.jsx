@@ -2,10 +2,11 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import './App.css'
 import FormUsers from './components/FormUsers'
+import Message from './components/Message'
 import UsersCard from './components/UsersCard'
 
 
-const baseURL = 'https://users-crud1.herokuapp.com'
+const baseURL = 'http://144.126.218.162:9000'
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
   const [users, setUsers] = useState()
   const [updatedInfo, setUpdatedInfo] = useState()
   const [formIsClosed, setFormIsClosed] = useState(true)
+  const [messageClose, setMessageClose] = useState(true)
   
   const getAllUsers = () => {
     const URL = `${baseURL}/users/`
@@ -67,6 +69,12 @@ const handleOpenForm = () => {
       <h1 className='app_title'>USERS CRUD</h1>
       <button onClick={handleOpenForm} className='app_btn'>Create a New User</button>
       </div>
+      <div className={`message_container ${messageClose && 'disable_message'}`}>
+        <Message
+          setMessageClose={setMessageClose}
+          
+        />
+      </div>
       <div className={`form_container ${formIsClosed && 'disable_form'}`}>
         <FormUsers 
         createUsers={createUsers}
@@ -74,6 +82,7 @@ const handleOpenForm = () => {
         updatedUserById={updatedUserById}
         setUpdatedInfo={setUpdatedInfo}
         setFormIsClosed={setFormIsClosed}
+        setMessageClose={setMessageClose}
         />
       </div>
       <div className='cards_container'>

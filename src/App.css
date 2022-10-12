@@ -40,9 +40,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 .disable_form {
+    display: none;
+}
+
+.message_container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0002;
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.disable_message {
     display: none;
 }
 
